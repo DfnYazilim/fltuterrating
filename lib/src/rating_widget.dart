@@ -111,19 +111,21 @@ class _RatingWidgetState extends State<RatingWidget> {
                           style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 20),
-                        GridView.count(
-                          crossAxisCount: 2,
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 10,
-                          childAspectRatio: 2.9,
-                          shrinkWrap: true,
-                          // physics: const NeverScrollableScrollPhysics(),
-                          children: List.from(controller.ratingModel.ratingConfig.items.map(
-                            (criterion) => CriterionButton(
-                              text: criterion.name,
-                              onSelectChange: (selected) => controller.ratingCubit.selectedCriterionsUpdate(criterion, selected),
-                            ),
-                          )),
+                        Expanded(
+                          child: GridView.count(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 10,
+                            mainAxisSpacing: 10,
+                            childAspectRatio: 2.9,
+                            shrinkWrap: true,
+                            // physics: const NeverScrollableScrollPhysics(),
+                            children: List.from(controller.ratingModel.ratingConfig.items.map(
+                              (criterion) => CriterionButton(
+                                text: criterion.name,
+                                onSelectChange: (selected) => controller.ratingCubit.selectedCriterionsUpdate(criterion, selected),
+                              ),
+                            )),
+                          ),
                         ),
                         const SizedBox(height: 20),
                       ],
