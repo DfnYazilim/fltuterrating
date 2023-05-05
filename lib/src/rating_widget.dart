@@ -117,7 +117,7 @@ class _RatingWidgetState extends State<RatingWidget> {
                           mainAxisSpacing: 10,
                           childAspectRatio: 2.9,
                           shrinkWrap: true,
-                          physics: const NeverScrollableScrollPhysics(),
+                          // physics: const NeverScrollableScrollPhysics(),
                           children: List.from(controller.ratingModel.ratingConfig.items.map(
                             (criterion) => CriterionButton(
                               text: criterion.name,
