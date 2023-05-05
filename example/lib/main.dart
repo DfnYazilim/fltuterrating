@@ -58,7 +58,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       RatingCriterionModel(id: 2, name: 'Competência dos atendentes'),
                       RatingCriterionModel(id: 3, name: 'Limpeza do ambiente'),
                       RatingCriterionModel(id: 4, name: 'Tempo de espera'),
-                    ],
+                    ], confirmText: 'qweqw',
+                    passText: 'qweqwe'
                   ),
                 );
                 showModalBottomSheet(
@@ -90,7 +91,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       RatingCriterionModel(id: 2, name: 'Competência dos atendentes'),
                       RatingCriterionModel(id: 3, name: 'Limpeza do ambiente'),
                       RatingCriterionModel(id: 4, name: 'Tempo de espera'),
-                    ],
+                    ], confirmText: 'qwewq',
+                    passText: "123"
                   ),
                 );
                 scaffoldKey.currentState?.showBottomSheet(
@@ -119,7 +121,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       RatingCriterionModel(id: 2, name: 'Competência dos atendentes'),
                       RatingCriterionModel(id: 3, name: 'Limpeza do ambiente'),
                       RatingCriterionModel(id: 4, name: 'Tempo de espera'),
-                    ],
+                    ], confirmText: '123',passText: "312312"
                   ),
                 );
                 scaffoldKey.currentState?.showBottomSheet(
@@ -151,7 +153,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         RatingCriterionModel(id: 2, name: 'Competência dos atendentes'),
                         RatingCriterionModel(id: 3, name: 'Limpeza do ambiente'),
                         RatingCriterionModel(id: 4, name: 'Tempo de espera'),
-                      ],
+                      ], confirmText: 'qweq',passText: "weqw"
                     ),
                   );
                   Scaffold.of(context).showBottomSheet(
