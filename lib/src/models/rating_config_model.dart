@@ -7,7 +7,10 @@ class RatingConfigModel {
   final String ratingSurvey3;
   final String ratingSurvey4;
   final String ratingSurvey5;
+  final String confirmText;
+  final String passText;
   final List<RatingCriterionModel> items;
+
   RatingConfigModel({
     required this.id,
     required this.ratingSurvey1,
@@ -16,6 +19,8 @@ class RatingConfigModel {
     required this.ratingSurvey4,
     required this.ratingSurvey5,
     required this.items,
+    required this.confirmText,
+    required this.passText,
   });
 
   RatingConfigModel copyWith({
@@ -26,6 +31,8 @@ class RatingConfigModel {
     String? ratingSurvey4,
     String? ratingSurvey5,
     List<RatingCriterionModel>? items,
+    String? confirmText,
+    String? passText
   }) {
     return RatingConfigModel(
       id: id ?? this.id,
@@ -35,6 +42,8 @@ class RatingConfigModel {
       ratingSurvey4: ratingSurvey4 ?? this.ratingSurvey4,
       ratingSurvey5: ratingSurvey5 ?? this.ratingSurvey5,
       items: items ?? this.items,
+      confirmText: this.confirmText,
+      passText: this.passText
     );
   }
 }

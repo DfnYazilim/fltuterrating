@@ -138,7 +138,7 @@ class _RatingWidgetState extends State<RatingWidget> {
                       opacity: selectedRate == 0 ? 0 : 1,
                       child: Center(
                         child: DefaultButton.text(
-                          "CONFIRMAR",
+                          controller.ratingModel.ratingConfig.confirmText,
                           textColor: Colors.white,
                           color: Theme.of(context).colorScheme.secondary,
                           outlineColor: Theme.of(context).colorScheme.secondary,
@@ -162,8 +162,8 @@ class _RatingWidgetState extends State<RatingWidget> {
                             textColor: const Color(0xFF2F333A),
                             onPressed: () => controller.ratingCubit.ignoreForEver(),
                             isLoading: isLoading,
-                            child: const Text(
-                              "Prefiro não classificar",
+                            child:  Text(
+                              controller.ratingModel.ratingConfig.passText,
                               style: TextStyle(decoration: TextDecoration.underline, color: Colors.black54, fontSize: 12),
                             ),
                           ),
